@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt}
+
+
+\newtheoremstyle{break}
+  {0}{3em}%
+  {}{}%
+  {\bfseries}{}%
+  {\newline}%
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}\newline\indent}%
+
+
+\theoremstyle{break}
+
+\newtheorem{definition}{Definition}
+\newtheorem{korollar}{Korollar}
+\newtheorem{satz}{Satz}
+
+\newcommand{\entry}[3]{\begin{#1}[#2]\input{tex/#3}\end{#1}}
+
+
+
+\begin{document}
+
+\section{Reelle Zahlen}
+
+% \entry{definition}{Natürliche Zahlen}{natuerliche_zahlen}
+
+\entry{definition}{Kommutativer Körper}{kommutativer_koerper}
+
+\entry{definition}{Gesetze im Körper}{gesetze_im_koerper}
+
+\entry{definition}{Angeordneter Körper}{angeordneter_koerper}
+
+\entry{definition}{Archimedisch angrordneter Körper}{archimedisch_angeordneter_körper}
+
+\entry{korollar}{Gesetze im angeordneten Körper}{gesetze_im_angeordneten_koerper}
+
+
+\entry{definition}{Diskrete Menge}{diskrete_menge}
+
+\entry{definition}{Fakultät}{fakultaet}
+
+
+\end{document}
