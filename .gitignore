@@ -1,4 +1,6 @@
-*
-!.gitignore
-!skript.tex
-!tex/*
+skript.aux
+skript.fdb_latexmk
+skript.fls
+skript.log
+skript.pdf
+skript.synctex.gz

@@ -10,6 +10,7 @@
 \usepackage{kpfonts}
 \usepackage{scrextend}
 \usepackage{titlesec}
+\usepackage{xparse}
 
 \setlength{\parindent}{0pt}
 
@@ -21,28 +22,23 @@
 \titleformat{\subsection}
 {\Large\bfseries}{\thesection}{1em}{}
 
-\newcommand{\entry}[2]{
-    \stepcounter{subsubsection}
-    \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
-    \begin{addmargin}{3em}
-    \input{tex/#2}
-    \end{addmargin}
+\NewDocumentCommand{\entry}{ m m o }{
+    \IfNoValueTF{#3}{
+        \stepcounter{subsubsection}
+        \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
+        \begin{addmargin}{3em}
+        \input{tex/#2}
+        \end{addmargin}
+    }{
+        \stepcounter{subsubsection}
+        \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
+        \begin{addmargin}{3em}
+        \input{tex/#3}
+        \end{addmargin}
+    }
 }
 
 
-
 \begin{document}
-
-\section{Reelle Zahlen}
-
-    \subsection{Archimedisch angrordnete Körper}
-
-        \entry{Definition}{Angeordneter Körper}
-        \entry{Korollar}{Gesetze im Körper}
-        
-        
-        
-        
-        \entry{Definition}{Fakultät}
-
+    \input{entries}
 \end{document}
