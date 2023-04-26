@@ -1,5 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
+% Packages
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -14,6 +16,9 @@
 \usepackage{titlesec}
 \usepackage{xparse}
 
+
+% PDF
+
 \hypersetup{
     pdftitle={Zusammenfassung MA2},
     pdfauthor={Samuel Kroiß},
@@ -24,10 +29,7 @@
     urlcolor=black
 }
 
-\setlength{\parskip}{0.5em}
-\setlength{\parindent}{0pt}
-
-\newcommand{\term}[1]{\textbf{\textit{#1}}}
+% Section
 
 \AddToHook{cmd/section/before}{\clearpage}
 
@@ -36,48 +38,27 @@
 \titleformat{\section}
 {\Huge\bfseries}{\thesection}{1em}{}
 
+
+% Subsection
+
 \titleformat{\subsection}
 {\Large\bfseries}{\thesubsection}{1em}{}
 
-\NewDocumentCommand{\entry}{ m m o }{
-    \IfNoValueTF{#3}{
-        \stepcounter{subsubsection}
-        \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
-        \begin{addmargin}{3em}
-        \input{entries/#2}
-        \end{addmargin}
-    }{
-        \stepcounter{subsubsection}
-        \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
-        \begin{addmargin}{3em}
-        \input{entries/#3}
-        \end{addmargin}
-    }
-}
 
-\title{Mathematik 2}
-\author{Prof. Dr. Peter M. Wirtz \and Samuel Kroiß}
-\date{\today}
+% Paragraph
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+
+% Commands
+
+\input{commands/entry}
+\input{commands/term}
+
 
 \begin{document}
-    \begin{titlepage}
-        \centering
-        {\textsc{OTH Regensburg} \par}
-        {\textsc{Fakultät Informatik und Mathematik} \par}
-        \vspace{4cm}
-        {\Huge\bfseries 
-            Mathematik 2
-        \par}
-        \vspace{2cm}
-        {\Large
-            Zusammenfassung zur Vorlesung Mathematik 2 für Informatik (MA2) bei Prof. Dr. Peter M. Wirtz.
-            Zusammengefasst von Samuel Kroiß.
-        \par}
-        \vfill
-        {\large Sommersemester 2023 \par Version vom \today\par}
-        \vfill
-        Trotz sorgfältiger Kontrolle kann keine Garantie auf Richtigkeit gegeben werden. Alle Inhalte sind mit eigener Verantwortung anzuwenden.
-    \end{titlepage}
+    \input{parts/title}
     \tableofcontents
-    \input{entries}
+    \input{parts/entries}
 \end{document}

@@ -1,0 +1,16 @@
+\newcommand{\entrysource}[3]{
+    \stepcounter{subsubsection}
+    \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
+    
+    \begin{addmargin}{3em}
+        \input{entries/#3}
+    \end{addmargin}
+}
+
+\NewDocumentCommand{\entry}{ m m o }{
+    \IfNoValueTF{#3}{
+        \entrysource{#1}{#2}{#2}
+    }{
+        \entrysource{#1}{#2}{#3}
+    }
+}
