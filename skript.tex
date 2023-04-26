@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -7,16 +7,31 @@
 \usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{kpfonts}
 \usepackage{scrextend}
 \usepackage{titlesec}
 \usepackage{xparse}
 
+\hypersetup{
+    pdftitle={Zusammenfassung MA2},
+    pdfauthor={Samuel Kroiß},
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
 
 \newcommand{\term}[1]{\textbf{\textit{#1}}}
+
+\AddToHook{cmd/section/before}{\clearpage}
+
+\titlespacing{\section}{0pt}{0pt}{1cm}
 
 \titleformat{\section}
 {\Huge\bfseries}{\thesection}{1em}{}
@@ -40,6 +55,29 @@
     }
 }
 
+\title{Mathematik 2}
+\author{Prof. Dr. Peter M. Wirtz \and Samuel Kroiß}
+\date{\today}
+
 \begin{document}
+    \begin{titlepage}
+        \centering
+        {\textsc{OTH Regensburg} \par}
+        {\textsc{Fakultät Informatik und Mathematik} \par}
+        \vspace{4cm}
+        {\Huge\bfseries 
+            Mathematik 2
+        \par}
+        \vspace{2cm}
+        {\Large
+            Zusammenfassung zur Vorlesung Mathematik 2 für Informatik (MA2) bei Prof. Dr. Peter M. Wirtz.
+            Zusammengefasst von Samuel Kroiß.
+        \par}
+        \vfill
+        {\large Sommersemester 2023 \par Version vom \today\par}
+        \vfill
+        Trotz sorgfältiger Kontrolle kann keine Garantie auf Richtigkeit gegeben werden. Alle Inhalte sind mit eigener Verantwortung anzuwenden.
+    \end{titlepage}
+    \tableofcontents
     \input{entries}
 \end{document}
