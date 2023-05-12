@@ -1,0 +1,16 @@
+Für beliebige Folgen definiert man:
+\begin{enumerate}[label=\alph*)]
+    \item $$\limsup_{n \to \infty} :=
+    \begin{cases}
+        + \infty, & \text{falls $(x_n)$ nicht nach oben beschränkt ist,} \\
+        - \infty, & \text{falls $x_n \to -\infty$ für $n \to \infty$,} \\
+        \lim_{n \to \infty}\sup(\{x_n, x_{n+1}, \dots\}), & \text{sonst.}
+    \end{cases}$$
+    \item $$\liminf_{n \to \infty} :=
+    \begin{cases}
+        + \infty, & \text{falls $x_n \to \infty$ für $n \to \infty$,} \\
+        - \infty, & \text{falls $(x_n)$ nicht nach unten beschränkt ist,} \\
+        \lim_{n \to \infty}\inf(\{x_n, x_{n+1}, \dots\}), & \text{sonst.}
+    \end{cases}
+    $$
+\end{enumerate}
