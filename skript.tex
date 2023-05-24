@@ -33,9 +33,10 @@
 
 % Section
 
-\AddToHook{cmd/section/before}{\clearpage}
+\AddToHook{cmd/section/before}{\clearpage\null}
 
-\titlespacing{\section}{0pt}{0pt}{1cm}
+    % see Table Of Contents
+\titlespacing{\section}{0pt}{0cm}{1cm}
 
 \titleformat{\section}
 {\Huge\bfseries}{\thesection}{1em}{}
@@ -67,5 +68,7 @@
 \begin{document}
     \input{parts/title}
     \tableofcontents
+    % see Section Styling
+    \titlespacing{\section}{0pt}{5cm}{1cm}
     \input{parts/entries}
 \end{document}
