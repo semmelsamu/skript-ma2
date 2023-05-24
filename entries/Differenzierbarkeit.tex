@@ -1,0 +1,4 @@
+Seien $I \in \R$ ein Intervall und $x_0 \in I$. Eine Funktion $f: I \to \R$ heißt \term{differenzierbar} im Punkt $x_0$, falls der folgende Grenzwert existiert:
+$$\lim_{\substack{x \to x_0 \\ x \in I \setminus \{x_0\}}} \frac{f(x)-f(x_0)}{x-x_0} \qquad \text{bzw. mit $x := x_0 + h$:} \qquad \lim_{\substack{h \to 0 \\ h \neq 0}} \frac{f(x_0 + h) - f(x_0)}{h}$$
+Im Falle der Existenz bezeichnet man diesen Grenzwert mit $f'(x_0) = \frac{df}{dx}(x_0)$. $f'(x_0)$ heißt die 1. Ableitung von $f$ an der Stelle $x_0$. Ist $f$ in  jedem Punkt $x_0 \in I$ differenzierbar, so heißt $f$ differenzierbar auf $I$. Falls $x$ ein Randbpunkt von $I$ ist, so versteht man den obigen Grenzwert als links- oder rechtsseitigen Grenzwert:
+$$f'_+(x_0) := \lim_{\substack{x \to x_{0+} \\ x \neq x_0}} \frac{f(x)-f(x_0)}{x-x_0} = \lim_{\substack{h \to 0+ \\ h \neq 0}} \frac{f(x_0+h)-f(x_0)}{h}$$

@@ -1,3 +1,12 @@
 Sei $(a_n)_{n \in \mathbb{N}}$ eine Folge in einem metrischen Raum $(M, d)$. Die Folge heißt \term{Cauchy-Folge}, falls es zu jedem $\varepsilon > 0$ ein $N \in \mathbb{N}$ gibt mit 
 $$d(a_n, a_m) < \varepsilon \qquad \text{für alle $n, m \geq N$.}$$
 Der Raum heißt \term{vollständig}, wenn \textit{jede} Cauchy-Folge konvergiert. (Ein vollständig normierter Raum heißt Banach-Raum.)
+
+Sei $(M, d)$ ein metrischer Raum und $(a_n)_{n \in \N}$ eine Folge in $M$.
+\begin{enumerate}
+    \item $(a_n)_{n \in \N}$ jeißt \term{konvergent} gegen $a \in M$, wenn gilt:
+    $$\forall \varepsilon > 0 \quad \exists N \in \N \quad \forall n \geq N : \qquad d(a_n, a) < \varepsilon$$
+    \textbf{Notation:} $\lim a_n = a$ oder $a_n \xrightarrow{d} a$.
+    \item $(a_n)_{n \in \N}$ jeißt \term{Cauchy-Folge}, falls gilt:
+    $$\forall \varepsilon > 0 \quad \exists N \in \N \quad \forall n, m \geq N : \qquad d(a_n, a_m) < \varepsilon$$
+\end{enumerate}
