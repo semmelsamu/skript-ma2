@@ -1,0 +1,6 @@
+Eine Funktion $f: I \to \R$ heißt \term{unstetig} im Punkt $p \in I$, wenn $f$ \textit{nicht} stetig in $p$ ist. Dies ist äquivalent zu jeder der folgenden Aussagen:
+\begin{itemize}
+    \item $\exists \varepsilon > 0 \ \forall \delta > 0 \ \exists x \in I: \ |x-p| < \delta$ und $|f(x) - f(p)| \geq \varepsilon$.
+    \item $\exists \varepsilon > 0 \ \forall \delta > 0 \ \exists x \in U_\delta(p) \cap I: \ f(x) \notin U_\varepsilon(f(p))$.
+    \item $\exists \varepsilon > 0 \ \forall \delta > 0: \ f(U_\delta(p) \cap I) \not\subset U_\varepsilon(f(p))$.
+\end{itemize}
