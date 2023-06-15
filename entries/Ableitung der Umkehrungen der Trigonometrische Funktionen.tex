@@ -1,0 +1,7 @@
+Die Funktion $f: \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \to [-1, 1], x \mapsto \sin (x)$ heißt Sinus. Die Ableitung $f'(x) = \cos (x)$ ist im Definitionsbereich positiv (insbesondere $\neq 0$). \par
+Die Umkehrfunktion $f^{-1}: [-1, 1] \to \left[-\frac{\pi}{2}, \frac{\pi}{2}\right], x \mapsto \arcsin (x)$ heißt Arcus-Sinus. Sie ist differenzierbar für alle $y \in (-1, 1)$ und mit $y = \sin (x)$ gilt
+$$\arcsin ' (y) = \frac{1}{f'(x)} = \frac{1}{\cos (x)} = \frac{1}{\cos(\arcsin(y))}.$$
+Mit der Eulerschen Relation 
+$$\sin^2(x)+\cos^2(x) = 1 \qquad \Longleftrightarrow \qquad \cos(x) = \sqrt{1-\sin^2(x)}$$
+lässt sich folgern:
+$$\frac{1}{\cos(\arcsin(y))} = \frac{1}{\sqrt{1-\smash[b]{\underbrace{\sin^2(\arcsin(y))}_{(\sin(\arcsin(y))^2)}}}} = \frac{1}{\sqrt{1-y^2}}$$
