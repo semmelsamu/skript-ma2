@@ -7,12 +7,14 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[german]{babel}
+\usepackage{csquotes}
 \usepackage{enumitem}
 \usepackage[margin=2cm]{geometry}
-\usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{kpfonts}
 \usepackage{mathtools}
+\usepackage{imakeidx}
+\usepackage{hyperref}
 \usepackage{csquotes}
 \usepackage{scrextend}
 \usepackage{titlesec}
@@ -66,10 +68,13 @@
 
 % Document
 
+\makeindex[title={Stichwortverzeichnis},intoc]
+
 \begin{document}
     \input{parts/title}
     \tableofcontents
     % see Section Styling
     \titlespacing{\section}{0pt}{5cm}{1cm}
     \input{parts/entries}
+    \printindex
 \end{document}
