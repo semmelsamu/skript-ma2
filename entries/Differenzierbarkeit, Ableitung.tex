@@ -1,0 +1,11 @@
+Seien $D \in \R$ ein Intervall und $x_0 \in D$. Eine Funktion $f: D \to \R$ heißt \term{differenzierbar} im Punkt $x_0$, falls der folgende Grenzwert existiert:
+$$
+\lim_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} 
+\qquad 
+\stackrel{x := x_0 + h}{=}
+\qquad 
+\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} \quad \text{(\term{h-Methode})}
+$$
+Im Falle der Existenz bezeichnet man diesen Grenzwert als \term{Ableitung} von $f$ an der Stelle $x_0$. Man schreibt auch:
+$$f'(x_0) := \frac{df}{dx}(x_0).$$
+Ist $f: D \to \R$ in  jedem Punkt $x_0 \in I$ differenzierbar, so heißt $f$ differenzierbar auf $I$.

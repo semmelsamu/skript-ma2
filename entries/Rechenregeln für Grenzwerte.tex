@@ -1,11 +1,11 @@
-Im folgenden seien $(a_n)_{n \in \mathbb{N}}$ und $(b_n)_{n \in \mathbb{N}}$ konvergente Folgen mit $\lim a_n = a$ und $\lim b_n = b$.
-\begin{enumerate}
-    \item $\lim |a_n| = |a|$
-    \item $\forall \lambda \in \mathbb{C}: \lim (\lambda \cdot a_n) = \lambda \cdot \lim a_n$
+Im folgenden seien $(a_n)_{n \in \mathbb{N}}$ und $(b_n)_{n \in \mathbb{N}}$ konvergente Folgen. Dann gilt:
+\begin{enumerate}[label=(\arabic*)]
+    \item $\lim |a_n| = |\lim a_n|$
+    \item $\lim (\lambda \cdot a_n) = \lambda \cdot \lim a_n$ \qquad für alle $\lambda \in \mathbb{C}$
     \item $\lim(a_n \pm b_n) = (\lim a_n) \pm (\lim b_n)$
-    \item $\lim(a_n \cdot b_n) = a \cdot b$
-    \item Ist $b \neq 0$, so existiert ein $n_0 \in \mathbb{N}$ mit $b_n \neq 0$ für alle $n \geq n_0$ und es gilt:
-    $$\lim_{\substack{n \to \infty \\ n \geq n_0}} \frac{a_n}{b_n} = \frac{a}{b}$$
-    \item Ist $a_n \geq 0$ für alle $n \in \mathbb{N}$, so gilt:
-    $$\lim \sqrt[k]{a_n} = \sqrt[k]{a} \quad (k \in \mathbb{N})$$
+    \item $\lim(a_n \cdot b_n) = (\lim a_n) \cdot (\lim b_n)$
+    \item Ist $\lim b_n \neq 0$, so existiert ein $n_0 \in \N$ mit $b_n \neq 0$ für alle $n \geq n_0$ und es gilt:
+    $$\lim_{\substack{n \to \infty \\ n \geq n_0}} \frac{a_n}{b_n} = \frac{\lim a_n}{\lim b_n}$$
+    \item Ist $a_n \geq 0$ für alle $n \in \N$, so gilt:
+    $$\lim \sqrt[k]{a_n} = \sqrt[k]{\lim a_n} \qquad \text{für alle $k \in \N$}$$
 \end{enumerate}
