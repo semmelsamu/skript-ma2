@@ -1,1 +1,7 @@
-\NewDocumentCommand{\term}{ m o }{\textbf{\textit{#1}}\IfNoValueTF{#2}{\index{#1}}{\index{#2}}}
+
+\NewDocumentCommand{\term}{ m o }{%
+\textbf{\textit{#1}}%
+\IfNoValueTF{#2}%
+{\index{#1}}%
+{\index{#2}}%
+}

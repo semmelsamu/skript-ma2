@@ -1,10 +1,10 @@
 \newcommand{\entrysource}[3]{
-    \stepcounter{subsubsection}
-    \subsubsection*{\large \textsc{#1} \arabic{section}.\arabic{subsection}.\arabic{subsubsection} (#2)}
+    \stepcounter{subsection}
+    \subsection*{\large \textsc{#1} \arabic{chapter}.\arabic{section}.\arabic{subsection} (#2)}
     
-    \begin{addmargin}{3em}
+    \begin{adjustwidth}{3em}{0pt}
         \input{entries/#3}
-    \end{addmargin}
+    \end{adjustwidth}
 }
 
 \NewDocumentCommand{\entry}{ m m o }{
