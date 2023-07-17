@@ -1,11 +1,13 @@
 
+% Setup margins
 \geometry{
     top=2.5cm,
     bottom=2.5cm,
     inner=3cm,
     outer=2cm
- }
+}
 
+% Setup pdf
 \hypersetup{
     pdftitle={Zusammenfassung MA2},
     pdfauthor={Samuel Kroiß},
@@ -16,10 +18,12 @@
     urlcolor=black
 }
 
-\indexsetup{
-  %level=\chapter,% <-- already default
-  othercode={%
-    \thispagestyle{fancy}%
-  }
-}
+% Setup index
 \makeindex[title={Stichwortverzeichnis},intoc]
+
+% Index should also have fancy headers
+\indexsetup{
+    othercode={
+        \thispagestyle{plain}
+    }
+}
