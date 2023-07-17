@@ -18,12 +18,15 @@
     urlcolor=black
 }
 
+% Table of contents should have empty headers
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
+
 % Setup index
 \makeindex[title={Stichwortverzeichnis},intoc]
 
 % Index should also have fancy headers
 \indexsetup{
     othercode={
-        \thispagestyle{plain}
+        \thispagestyle{fancy}
     }
 }
